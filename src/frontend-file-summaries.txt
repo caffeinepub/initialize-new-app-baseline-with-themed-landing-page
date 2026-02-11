@@ -1,0 +1,7 @@
+{
+  "frontend/src/App.tsx": "Main landing page component featuring a hero section with generated images, feature cards, and a complete header/footer layout with warm terracotta theme.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks file with example structure ready for future backend integration.",
+  "frontend/src/index.css": "Global stylesheet with warm terracotta/cream OKLCH color palette, custom Crimson Pro display font, and comprehensive light/dark mode tokens.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom display font family (Crimson Pro), warm color tokens, and custom shadow utilities.",
+  "frontend/index.html": "HTML entry point with updated title and meta description matching the landing page branding."
+}

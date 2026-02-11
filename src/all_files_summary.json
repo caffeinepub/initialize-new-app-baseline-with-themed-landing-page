@@ -1,0 +1,15 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods defined.",
+  "feature_evidence.json": "Feature evidence report mapping features to related frontend files and components.",
+  "frontend-file-summaries.txt": "Text file containing brief summaries of key frontend source files.",
+  "frontend/index.css": "Tailwind base styles and OKLCH color tokens defining theme variables for light and dark modes.",
+  "frontend/index.html": "HTML entry file setting page metadata and mounting the React app.",
+  "frontend/src/App.tsx": "Main landing page React component featuring header, hero section with generated images, and initial layout.",
+  "frontend/src/hooks/useActor.ts": "Hook that creates and manages an authenticated or anonymous backend actor using React Query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context and provider for Internet Identity authentication with login, logout, and identity management.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder React Query hook structure prepared for future backend calls.",
+  "frontend/src/index.css": "Global stylesheet applying custom warm theme colors, fonts, and Tailwind base layers.",
+  "frontend/src/main.tsx": "Application entry point initializing providers and rendering the root React component.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending fonts, warm color palette, shadows, and animation utilities.",
+  "project_state.json": "Tracks project metadata, feature definitions, image requirements, and overall setup state. Contains existing landing-page and theme features but no new feature requests."
+}

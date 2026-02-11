@@ -1,0 +1,44 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-11T05:03:38.725Z",
+  "summary": "The diff implements a themed landing page (with title/tagline/buttons) using Tailwind tokens and existing UI components, and references the required generated images. However, the required static image files themselves are not shown as added under the specified public assets path. The diff also adds Internet Identity/react-query actor plumbing that was not requested for this baseline.",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "Add the generated static images to the project under frontend/public/assets/generated and render them on the landing page (e.g., hero background and app mark).",
+      "reason": "The landing page references the image paths, but the diff summary does not show the image files being added under frontend/public/assets/generated with the required exact filenames.",
+      "evidence": [
+        "frontend/src/App.tsx (references /assets/generated/hero-bg.dim_1600x900.png and /assets/generated/app-mark.dim_512x512.png)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity provider integration and authentication/actor wiring (React context, AuthClient, identity-based actor creation, react-query invalidation).",
+      "reason": "Not requested in REQ-1/REQ-2/REQ-3; authentication is stated as allowed but not required for this baseline, and this adds significant auth scaffolding beyond the landing-page/theme/image requirements.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

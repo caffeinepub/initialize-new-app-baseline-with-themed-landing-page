@@ -1,0 +1,75 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Initialize new app baseline with themed landing page",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a clean landing screen with app title, tagline, and a primary CTA button with placeholder behavior.",
+      "acceptanceCriteria": [
+        "App loads successfully and displays a single coherent landing screen without errors.",
+        "All user-facing text on the landing page is in English.",
+        "Landing page includes: title, tagline/description, and one primary button with placeholder behavior (e.g., no-op or disabled) that does not break the app."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the root App component rendered by frontend/src/main.tsx that shows a single landing screen with English title, tagline, and a primary CTA button that is safe (no-op/disabled) and cannot crash the app. Use Tailwind utility classes for layout and spacing; if using shadcn-ui (from the selected shadcn-ui component) for the button/container styling, verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the document title to match the displayed app name/title on the landing page, keeping all user-facing text in English."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Define and apply a cohesive Tailwind-based theme (warm/neutral palette, typography, spacing) consistently across the landing page, avoiding blue/purple as primary colors.",
+      "acceptanceCriteria": [
+        "Landing page uses a consistent color palette, typographic scale, and spacing system.",
+        "Theme avoids blue/purple as the primary palette.",
+        "UI styling is implemented with Tailwind and existing UI components composed without modifying immutable UI component source files."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create the global stylesheet imported by frontend/src/main.tsx with Tailwind directives and theme tokens (CSS variables) that define a cohesive warm neutral palette (avoiding blue/purple as primary), typographic defaults, and consistent spacing. Keep styling Tailwind-driven and avoid editing any immutable UI component source files."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the theme consistently in the landing UI using Tailwind classes (typographic scale, spacing rhythm, and component styling). If composing existing shadcn-ui components for consistent styling, verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add required generated static images under frontend/public/assets/generated and render both on the landing page as static assets.",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated with the exact filenames specified in imageRequirements.required.",
+        "Landing page displays both images without routing them through the backend.",
+        "Images render correctly in production build (static asset paths resolve)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-bg.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated static hero background image asset at the exact required path: frontend/public/assets/generated/hero-bg.dim_1600x900.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/app-mark.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated static app mark/logo asset at the exact required path: frontend/public/assets/generated/app-mark.dim_512x512.png."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Render both static images on the landing page (hero background and app mark) by referencing the exact generated files in frontend/public/assets/generated/hero-bg.dim_1600x900.png and frontend/public/assets/generated/app-mark.dim_512x512.png, ensuring they are served as static assets (no backend involvement). If using any existing UI components for image framing/layout, verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

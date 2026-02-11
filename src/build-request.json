@@ -1,0 +1,78 @@
+{
+  "kind": "build_request",
+  "title": "Initialize new app baseline with themed landing page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Provide a clean initial landing page that confirms the project is set up and ready for feature development, including: app name/title, short tagline, and a simple primary call-to-action button (no specific feature behavior required yet).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "App new ready"
+        ]
+      },
+      "acceptanceCriteria": [
+        "App loads successfully and displays a single coherent landing screen without errors.",
+        "All user-facing text on the landing page is in English.",
+        "Landing page includes: title, tagline/description, and one primary button with placeholder behavior (e.g., no-op or disabled) that does not break the app."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create and apply a cohesive visual theme for the UI (colors, typography, spacing, and component styling) and use it consistently across the landing page. Avoid blue/purple as the primary palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "App new ready"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page uses a consistent color palette, typographic scale, and spacing system.",
+        "Theme avoids blue/purple as the primary palette.",
+        "UI styling is implemented with Tailwind and existing UI components composed without modifying immutable UI component source files."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add the generated static images to the project under frontend/public/assets/generated and render them on the landing page (e.g., hero background and app mark).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "App new ready"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated with the exact filenames specified in imageRequirements.required.",
+        "Landing page displays both images without routing them through the backend.",
+        "Images render correctly in production build (static asset paths resolve)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor (all logic in backend/main.mo).",
+    "Do not modify files in frontend immutablePaths; compose existing UI components instead.",
+    "Use English for any user-facing text."
+  ],
+  "nonGoals": [
+    "Implementing any domain-specific features (e.g., tasks, payments, chat) before the user specifies requirements.",
+    "Adding third-party authentication providers (only Internet Identity is allowed, but not required for this baseline).",
+    "Adding external databases or non-supported backend technologies."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Abstract geometric hero background with warm neutrals and subtle grain (hero-bg.dim_1600x900.png)",
+      "Minimal app mark/logo: simple monogram inside a rounded shape, neutral palette (app-mark.dim_512x512.png)"
+    ],
+    "edits": []
+  }
+}

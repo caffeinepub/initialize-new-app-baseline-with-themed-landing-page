@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Abstract geometric hero background with warm neutrals and subtle grain (hero-bg.dim_1600x900.png)\n- Minimal app mark/logo: simple monogram inside a rounded shape, neutral palette (app-mark.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-provide-a-clean-initial-landing-page-that-confirms-the-project-is-set-up-and-ready-for-feature-development-including-app-name-title-short-tagline-and-a-simple-primary-call-to-action-button-no-specific-feature-behavior-required-yet",
+      "title": "Provide a clean initial landing page that confirms the project is set up and ready for feature development, including: app name/title, short tagline, and a simple primary call-to-action button (no specific feature behavior required yet).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-and-apply-a-cohesive-visual-theme-for-the-ui-colors-typography-spacing-and-component-styling-and-use-it-consistently-across-the-landing-page-avoid-blue-purple-as-the-primary-palette",
+      "title": "Create and apply a cohesive visual theme for the UI (colors, typography, spacing, and component styling) and use it consistently across the landing page. Avoid blue/purple as the primary palette.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-generated-static-images-to-the-project-under-frontend-public-assets-generated-and-render-them-on-the-landing-page-e-g-hero-background-and-app-mark",
+      "title": "Add the generated static images to the project under frontend/public/assets/generated and render them on the landing page (e.g., hero background and app mark).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "projectName": "Initialize new app baseline with themed landing page",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
